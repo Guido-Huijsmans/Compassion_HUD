@@ -8,29 +8,19 @@ import net.minecraft.network.chat.Component
 import net.minecraft.util.Mth
 
 object CompassHUDElement {
-
-    private const val BAR_WIDTH = 256
-    private const val BAR_HEIGHT = 16
-    private const val DEGREES_SHOWN = 90f
-    private const val COLOR = 0xFFDDDDDD.toInt()
-
     private val directions = listOf(
         "compassion-hud.north" to 180f,
         "compassion-hud.northwest" to 135f,
         "compassion-hud.west" to 90f,
         "compassion-hud.southwest" to 45f,
         "compassion-hud.south" to 0f,
-        "compassion-hud.southeast" to -135f,
+        "compassion-hud.southeast" to -45f,
         "compassion-hud.east" to -90f,
-        "compassion-hud.northeast" to -45f
-
+        "compassion-hud.northeast" to -135f
     )
-
     private val LABEL_ANGLES = setOf(
         0f, 45f, 90f, 135f, 180f, -135f, -90f, -45f, -180f
     )
-
-
     fun render(graphics: GuiGraphicsExtractor, delta: DeltaTracker) {
         val mc = Minecraft.getInstance()
         val player = mc.player ?: return

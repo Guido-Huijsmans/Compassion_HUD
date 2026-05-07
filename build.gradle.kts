@@ -11,6 +11,7 @@ group = providers.gradleProperty("maven_group").get()
 
 repositories {
 	maven("https://maven.isxander.dev/releases")
+	maven("https://maven.terraformersmc.com/")
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -35,6 +36,7 @@ dependencies {
 	implementation("net.fabricmc:fabric-language-kotlin:${providers.gradleProperty("fabric_kotlin_version").get()}")
 
 	implementation("dev.isxander:yet-another-config-lib:3.9.3+26.1-fabric")
+	implementation("com.terraformersmc:modmenu:18.0.0-alpha.8")
 }
 
 tasks.processResources {

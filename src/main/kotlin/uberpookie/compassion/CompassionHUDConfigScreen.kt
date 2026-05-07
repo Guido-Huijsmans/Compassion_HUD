@@ -46,7 +46,7 @@ object CompassionHUDConfigScreen {
                     .name(Component.translatable("compassion.config.degrees_shown"))
                     .description(OptionDescription.of(Component.translatable("compassion.config.degrees_shown.desc")))
                     .binding(defaults.degreesShown, { pending.degreesShown }, { pending = pending.copy(degreesShown = it) })
-                    .controller { opt -> FloatSliderControllerBuilder.create(opt).range(45f, 180f).step(5f) }
+                    .controller { opt -> FloatSliderControllerBuilder.create(opt).range(45f, 180f).step(5f).valueFormatter { value -> Component.literal("%.0f°".format(value)) } }
                     .build()
                 )
 
@@ -54,8 +54,8 @@ object CompassionHUDConfigScreen {
                     .name(Component.translatable("compassion.config.tick_step"))
                     .description(OptionDescription.of(Component.translatable("compassion.config.tick_step.desc")))
                     .binding(
-                        defaults.tickStep,
-                        { pending.tickStep },
+                        tickStepPresets.indexOf(defaults.tickStep).toFloat(),               // ← index e.g. 2
+                        { tickStepPresets.indexOf(pending.tickStep).toFloat().coerceAtLeast(0f) }, // ← index e.g. 2
                         { newValue ->
                             val index = newValue.toInt().coerceIn(0, tickStepPresets.size - 1)
                             pending = pending.copy(tickStep = tickStepPresets[index])

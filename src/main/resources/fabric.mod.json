@@ -27,6 +27,9 @@
 				"adapter": "kotlin"
 			}
 		],
+		"modmenu": [
+			{ "value": "uberpookie.compassion.CompassionHUDClient", "adapter": "kotlin" }
+		],
 		"fabric-datagen": [
 			{
 				"value": "uberpookie.compassion.CompassionHUDDataGenerator",
