@@ -1,0 +1,10 @@
+{
+  "compassion-hud.north": "K",
+  "compassion-hud.northeast": "KD",
+  "compassion-hud.east": "D",
+  "compassion-hud.southeast": "GD",
+  "compassion-hud.south": "G",
+  "compassion-hud.southwest": "GB",
+  "compassion-hud.west": "B",
+  "compassion-hud.northwest": "KB"
+}
