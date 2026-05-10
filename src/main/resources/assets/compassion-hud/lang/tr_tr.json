@@ -6,5 +6,16 @@
   "compassion-hud.south": "G",
   "compassion-hud.southwest": "GB",
   "compassion-hud.west": "B",
-  "compassion-hud.northwest": "KB"
+  "compassion-hud.northwest": "KB",
+  "compassion-hud.config.title": "Ayarlar",
+  "compassion-hud.config.bar_width": "Pusula Genişliği",
+  "compassion-hud.config.bar_width.desc": "Pusulanın genişliğini değiştirir.\nPiksel * GUI ölçeği\nVarsayılan değer 200",
+  "compassion-hud.config.text_color": "Metin Rengi",
+  "compassion-hud.config.text_color.desc": "Yön göstergelerinin rengini değiştirir.\n8 basamaklı onaltılık kod\nVarsayılan değer FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Pusula Aralığı",
+  "compassion-hud.config.degrees_shown.desc": "Pusulada gösterilen açı aralığını değiştirir.\nDerece\nVarsayılan değer 90°'dir",
+  "compassion-hud.config.tick_step": "Çizgi Adımı",
+  "compassion-hud.config.tick_step.desc": "Dikey çizgiler arasındaki açıları değiştirir.\nDerece\nVarsayılan değer 11,25°'dir",
+  "compassion-hud.config.hide_on_debug": "Hata ayıklama menüsünde gizle (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Hata ayıklama menüsünde (F3) pusulanın görünür olup olmayacağını belirler.\nVarsayılan değer True"
 }

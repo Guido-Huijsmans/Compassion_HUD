@@ -20,19 +20,19 @@ object CompassionHUDConfigScreen {
         return YetAnotherConfigLib.createBuilder()
             .title(Component.literal("Compassion HUD"))
             .category(ConfigCategory.createBuilder()
-                .name(Component.literal("General"))
+                .name(Component.translatable("compassion-hud.config.title"))
 
                 .option(Option.createBuilder<Int>()
-                    .name(Component.translatable("compassion.config.bar_width"))
-                    .description(OptionDescription.of(Component.translatable("compassion.config.bar_width.desc")))
+                    .name(Component.translatable("compassion-hud.config.bar_width"))
+                    .description(OptionDescription.of(Component.translatable("compassion-hud.config.bar_width.desc")))
                     .binding(defaults.barWidth, { pending.barWidth }, { pending = pending.copy(barWidth = it) })
                     .controller { opt -> IntegerSliderControllerBuilder.create(opt).range(64, 320).step(8) }
                     .build()
                 )
 
                 .option(Option.createBuilder<Color>()
-                    .name(Component.translatable("compassion.config.text_color"))
-                    .description(OptionDescription.of(Component.translatable("compassion.config.text_color.desc")))
+                    .name(Component.translatable("compassion-hud.config.text_color"))
+                    .description(OptionDescription.of(Component.translatable("compassion-hud.config.text_color.desc")))
                     .binding(
                         defaults.textColor.toColor(),
                         { pending.textColor.toColor() },
@@ -43,16 +43,16 @@ object CompassionHUDConfigScreen {
                 )
 
                 .option(Option.createBuilder<Float>()
-                    .name(Component.translatable("compassion.config.degrees_shown"))
-                    .description(OptionDescription.of(Component.translatable("compassion.config.degrees_shown.desc")))
+                    .name(Component.translatable("compassion-hud.config.degrees_shown"))
+                    .description(OptionDescription.of(Component.translatable("compassion-hud.config.degrees_shown.desc")))
                     .binding(defaults.degreesShown, { pending.degreesShown }, { pending = pending.copy(degreesShown = it) })
                     .controller { opt -> FloatSliderControllerBuilder.create(opt).range(45f, 180f).step(5f).valueFormatter { value -> Component.literal("%.0f°".format(value)) } }
                     .build()
                 )
 
                 .option(Option.createBuilder<Float>()
-                    .name(Component.translatable("compassion.config.tick_step"))
-                    .description(OptionDescription.of(Component.translatable("compassion.config.tick_step.desc")))
+                    .name(Component.translatable("compassion-hud.config.tick_step"))
+                    .description(OptionDescription.of(Component.translatable("compassion-hud.config.tick_step.desc")))
                     .binding(
                         tickStepPresets.indexOf(defaults.tickStep).toFloat(),               // ← index e.g. 2
                         { tickStepPresets.indexOf(pending.tickStep).toFloat().coerceAtLeast(0f) }, // ← index e.g. 2
@@ -73,8 +73,8 @@ object CompassionHUDConfigScreen {
                 )
 
                 .option(Option.createBuilder<Boolean>()
-                    .name(Component.translatable("compassion.config.hide_on_debug"))
-                    .description(OptionDescription.of(Component.translatable("compassion.config.hide_on_debug.desc")))
+                    .name(Component.translatable("compassion-hud.config.hide_on_debug"))
+                    .description(OptionDescription.of(Component.translatable("compassion-hud.config.hide_on_debug.desc")))
                     .binding(defaults.hideOnDebug, { pending.hideOnDebug }, { pending = pending.copy(hideOnDebug = it) })
                     .controller(TickBoxControllerBuilder::create)
                     .build()

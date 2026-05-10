@@ -6,5 +6,16 @@
   "compassion-hud.south": "S",
   "compassion-hud.southwest": "SV",
   "compassion-hud.west": "V",
-  "compassion-hud.northwest": "NV"
+  "compassion-hud.northwest": "NV",
+  "compassion-hud.config.title": "Setări",
+  "compassion-hud.config.bar_width": "Lățimea busolei",
+  "compassion-hud.config.bar_width.desc": "Modifică lățimea busolei.\nPixeli * scara GUI\nValoarea implicită este 200",
+  "compassion-hud.config.text_color": "Culoarea textului",
+  "compassion-hud.config.text_color.desc": "Modifică culoarea indicatorilor de direcție.\nCod hexazecimal de 8 cifre\nValoarea implicită este FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Interval busolă",
+  "compassion-hud.config.degrees_shown.desc": "Modifică intervalul unghiurilor afișate în busolă.\nGrade\nValoarea implicită este 90°",
+  "compassion-hud.config.tick_step": "Pas linie",
+  "compassion-hud.config.tick_step.desc": "Modifică unghiurile dintre liniile verticale.\nGrade\nValoarea implicită este 11,25°",
+  "compassion-hud.config.hide_on_debug": "Ascunde în meniul de depanare (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Comută vizibilitatea busolei în meniul de depanare (F3).\nValoarea implicită este True"
 }

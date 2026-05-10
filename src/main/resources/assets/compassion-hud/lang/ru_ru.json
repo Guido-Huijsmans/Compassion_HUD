@@ -6,5 +6,16 @@
   "compassion-hud.south": "Ю",
   "compassion-hud.southwest": "ЮЗ",
   "compassion-hud.west": "З",
-  "compassion-hud.northwest": "СЗ"
+  "compassion-hud.northwest": "СЗ",
+  "compassion-hud.config.title": "Настройки",
+  "compassion-hud.config.bar_width": "Ширина компаса",
+  "compassion-hud.config.bar_width.desc": "Изменяет ширину компаса.\nВ пикселях * масштаб интерфейса\nПо умолчанию: 200",
+  "compassion-hud.config.text_color": "Цвет текста",
+  "compassion-hud.config.text_color.desc": "Изменяет цвет индикаторов направления.\n8-значный шестнадцатеричный код.\nПо умолчанию: FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Диапазон компаса",
+  "compassion-hud.config.degrees_shown.desc": "Изменяет диапазон углов, отображаемых на компасе.\nГрадусы\nПо умолчанию: 90°",
+  "compassion-hud.config.tick_step": "Шаг линии",
+  "compassion-hud.config.tick_step.desc": "Изменяет углы между вертикальными линиями.\nГрадусы\nПо умолчанию: 11,25°",
+  "compassion-hud.config.hide_on_debug": "Скрыть в меню отладки (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Устанавливает, будет ли компас виден в меню отладки (F3).\nПо умолчанию: True"
 }

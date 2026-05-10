@@ -6,5 +6,16 @@
   "compassion-hud.south": "S",
   "compassion-hud.southwest": "SV",
   "compassion-hud.west": "V",
-  "compassion-hud.northwest": "NV"
+  "compassion-hud.northwest": "NV",
+  "compassion-hud.config.title": "Innstillinger",
+  "compassion-hud.config.bar_width": "Kompassbredde",
+  "compassion-hud.config.bar_width.desc": "Endrer bredden på kompasset.\nPiksler * GUI-skala\nStandardverdi er 200",
+  "compassion-hud.config.text_color": "Tekstfarge",
+  "compassion-hud.config.text_color.desc": "Endrer fargen på retningsindikatorene.\n8-sifret heksadesimal kode\nStandardverdi er FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Kompassområde",
+  "compassion-hud.config.degrees_shown.desc": "Endrer vinkelområdet som vises i kompasset.\nGrader\nStandardverdi er 90°",
+  "compassion-hud.config.tick_step": "Linjeavstand",
+  "compassion-hud.config.tick_step.desc": "Endrer vinkelen mellom de vertikale linjene.\nGrader\nStandard er 11,25°",
+  "compassion-hud.config.hide_on_debug": "Skjul ved feilsøking (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Veksler mellom om kompasset er synlig i feilsøkingsmodus (F3).\nStandard er True"
 }

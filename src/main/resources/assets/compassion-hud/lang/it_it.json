@@ -6,5 +6,16 @@
   "compassion-hud.south": "S",
   "compassion-hud.southwest": "SO",
   "compassion-hud.west": "O",
-  "compassion-hud.northwest": "NO"
+  "compassion-hud.northwest": "NO",
+  "compassion-hud.config.title": "Impostazioni",
+  "compassion-hud.config.bar_width": "Larghezza bussola",
+  "compassion-hud.config.bar_width.desc": "Modifica la larghezza della bussola.\nPixel * Scala GUI\nIl valore predefinito è 200",
+  "compassion-hud.config.text_color": "Colore testo",
+  "compassion-hud.config.text_color.desc": "Modifica il colore degli indicatori di direzione.\nCodice esadecimale a 8 cifre\nIl valore predefinito è FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Intervallo bussola",
+  "compassion-hud.config.degrees_shown.desc": "Modifica l'intervallo di angoli visualizzati nella bussola.\nGradi\nIl valore predefinito è 90°",
+  "compassion-hud.config.tick_step": "Passo linea",
+  "compassion-hud.config.tick_step.desc": "Modifica l'angolo tra le linee verticali.\nGradi\nIl valore predefinito è 11,25°",
+  "compassion-hud.config.hide_on_debug": "Nascondi in modalità debug (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Attiva o disattiva la visibilità della bussola in modalità debug (F3).\nIl valore predefinito è True"
 }

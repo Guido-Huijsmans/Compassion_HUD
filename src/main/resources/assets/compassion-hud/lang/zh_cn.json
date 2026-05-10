@@ -6,5 +6,16 @@
   "compassion-hud.south": "南",
   "compassion-hud.southwest": "西南",
   "compassion-hud.west": "西",
-  "compassion-hud.northwest": "西北"
+  "compassion-hud.northwest": "西北",
+  "compassion-hud.config.title": "设置",
+  "compassion-hud.config.bar_width": "罗盘宽度",
+  "compassion-hud.config.bar_width.desc": "调整罗盘的宽度。\n像素数 * GUI 缩放比例\n默认值为 200",
+  "compassion-hud.config.text_color": "文字颜色",
+  "compassion-hud.config.text_color.desc": "更改方向指示器的颜色。\n8 位十六进制代码\n默认值为 FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "罗盘范围",
+  "compassion-hud.config.degrees_shown.desc": "调整罗盘中显示的角度范围。\n单位为度\n默认值为 90°",
+  "compassion-hud.config.tick_step": "线间距",
+  "compassion-hud.config.tick_step.desc": "调整垂直线之间的角度间隔。\n单位为度\n默认值为 11.25°",
+  "compassion-hud.config.hide_on_debug": "在调试菜单（F3）中隐藏",
+  "compassion-hud.config.hide_on_debug.desc": "切换罗盘在调试菜单（F3）中的可见状态。\n默认值为 True"
 }

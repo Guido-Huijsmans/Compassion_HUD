@@ -6,5 +6,16 @@
   "compassion-hud.south": "남쪽",
   "compassion-hud.southwest": "남서쪽",
   "compassion-hud.west": "서쪽",
-  "compassion-hud.northwest": "북서쪽"
+  "compassion-hud.northwest": "북서쪽",
+  "compassion-hud.config.title": "설정",
+  "compassion-hud.config.bar_width": "나침반 너비",
+  "compassion-hud.config.bar_width.desc": "나침반의 너비를 변경합니다.\n픽셀 * GUI 배율\n기본값은 200입니다.",
+  "compassion-hud.config.text_color": "텍스트 색상",
+  "compassion-hud.config.text_color.desc": "방향 표시기의 색상을 변경합니다.\n8자리 16진수 코드\n기본값은 FFFFFFFF입니다.",
+  "compassion-hud.config.degrees_shown": "나침반 범위",
+  "compassion-hud.config.degrees_shown.desc": "나침반에 표시되는 각도 범위를 변경합니다.\n도\n기본값은 90°입니다.",
+  "compassion-hud.config.tick_step": "선 간격",
+  "compassion-hud.config.tick_step.desc": "수직선 사이의 각도를 변경합니다.\n도\n기본값은 11.25°",
+  "compassion-hud.config.hide_on_debug": "디버그(F3) 시 숨기기",
+  "compassion-hud.config.hide_on_debug.desc": "디버그(F3) 모드에서 나침반을 표시할지 여부를 전환합니다.\n기본값은 True"
 }

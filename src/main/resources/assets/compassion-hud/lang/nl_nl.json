@@ -6,5 +6,16 @@
   "compassion-hud.south": "Z",
   "compassion-hud.southwest": "ZW",
   "compassion-hud.west": "W",
-  "compassion-hud.northwest": "NW"
+  "compassion-hud.northwest": "NW",
+  "compassion-hud.config.title": "Instellingen",
+  "compassion-hud.config.bar_width": "Breedte kompas",
+  "compassion-hud.config.bar_width.desc": "Wijzigt de breedte van het kompas.\nPixels * GUI-schaal\nStandaard is 200",
+  "compassion-hud.config.text_color": "Tekstkleur",
+  "compassion-hud.config.text_color.desc": "Wijzigt de kleur van de richtingsaanwijzers.\n8-cijferige hexadecimale code\nStandaard is FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Bereik kompas",
+  "compassion-hud.config.degrees_shown.desc": "Wijzigt het bereik van de hoeken die in het kompas worden weergegeven.\nGraden\nStandaard is 90°",
+  "compassion-hud.config.tick_step": "Lijnstap",
+  "compassion-hud.config.tick_step.desc": "Wijzigt de hoek tussen de verticale lijnen.\nGraden\nStandaard is 11,25°",
+  "compassion-hud.config.hide_on_debug": "Verbergen in debugmenu (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Schakelt in of uit of het kompas zichtbaar is in het debugmenu (F3).\nStandaard is True"
 }

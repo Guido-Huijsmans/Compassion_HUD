@@ -6,5 +6,16 @@
   "compassion-hud.south": "S",
   "compassion-hud.southwest": "SW",
   "compassion-hud.west": "W",
-  "compassion-hud.northwest": "NW"
+  "compassion-hud.northwest": "NW",
+  "compassion-hud.config.title": "Ustawienia",
+  "compassion-hud.config.bar_width": "Szerokość kompasu",
+  "compassion-hud.config.bar_width.desc": "Zmienia szerokość kompasu.\nPiksele * skala GUI\nWartość domyślna to 200",
+  "compassion-hud.config.text_color": "Kolor tekstu",
+  "compassion-hud.config.text_color.desc": "Zmienia kolor wskaźników kierunków.\n8-cyfrowy kod szesnastkowy\nWartość domyślna to FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Zakres kompasu",
+  "compassion-hud.config.degrees_shown.desc": "Zmienia zakres kątów wyświetlanych w kompasie.\nStopnie\nWartość domyślna to 90°",
+  "compassion-hud.config.tick_step": "Odstęp między liniami",
+  "compassion-hud.config.tick_step.desc": "Zmienia kąt między pionowymi liniami.\nStopnie\nDomyślnie 11,25°",
+  "compassion-hud.config.hide_on_debug": "Ukryj podczas debugowania (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Włącza lub wyłącza widoczność kompasu w trybie debugowania (F3).\nDomyślnie True"
 }

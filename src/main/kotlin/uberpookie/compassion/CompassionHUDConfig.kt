@@ -7,8 +7,8 @@ import net.fabricmc.loader.api.FabricLoader
 
 @Serializable
 data class CompassionHUDConfig (
-    val barWidth: Int = 256,
-    val textColor: Int = 0xFFDDDDDD.toInt(),
+    val barWidth: Int = 200,
+    val textColor: Int = 0xFFFFFFFF.toInt(),
     val degreesShown: Float = 90f,
     val hideOnDebug: Boolean = true,
     val tickStep: Float = 11.25f,

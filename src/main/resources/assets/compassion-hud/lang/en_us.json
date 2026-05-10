@@ -6,5 +6,16 @@
   "compassion-hud.south": "S",
   "compassion-hud.southwest": "SW",
   "compassion-hud.west": "W",
-  "compassion-hud.northwest": "NW"
+  "compassion-hud.northwest": "NW",
+  "compassion-hud.config.title": "Compassion HUD Settings",
+  "compassion-hud.config.bar_width": "Compass Width",
+  "compassion-hud.config.bar_width.desc": "Changes the width of the compass.\nPixels * GUI scale\nDefault is 200",
+  "compassion-hud.config.text_color": "Text Color",
+  "compassion-hud.config.text_color.desc": "Changes the color of the direction indicators.\n8-Digit hex code\nDefault is FFFFFFFF",
+  "compassion-hud.config.degrees_shown": "Compass Range",
+  "compassion-hud.config.degrees_shown.desc": "Changes the range of angles shown in the compass.\nDegrees\nDefault is 90°",
+  "compassion-hud.config.tick_step": "Line Step",
+  "compassion-hud.config.tick_step.desc": "Changes the angle between the vertical lines.\nDegrees\nDefault is 11.25°",
+  "compassion-hud.config.hide_on_debug": "Hide on debug (F3)",
+  "compassion-hud.config.hide_on_debug.desc": "Toggles whether the compass is visible while in the debug (F3) mode.\nDefault is True"
 }
