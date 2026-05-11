@@ -1,12 +1,14 @@
 package uberpookie.compassion
 
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.serializer
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.decodeFromString
 import net.fabricmc.loader.api.FabricLoader
+import java.io.File
 
 @Serializable
-data class CompassionHUDConfig (
+data class CompassionHUDConfig(
     val barWidth: Int = 200,
     val textColor: Int = 0xFFFFFFFF.toInt(),
     val degreesShown: Float = 90f,
@@ -15,28 +17,42 @@ data class CompassionHUDConfig (
     val coordinatePosition: CoordinatePosition = CoordinatePosition.COMPASS_RIGHT,
 ) {
     companion object {
-        private val file get() =
-            FabricLoader.getInstance().configDir.resolve("compassion_hud.json").toFile()
+        private val json = Json { 
+            prettyPrint = true
+            ignoreUnknownKeys = true 
+        }
+        
+        private val configFile: File
+            get() = FabricLoader.getInstance().configDir.resolve("compassion_hud.json").toFile()
 
-        private val json = Json { prettyPrint = true; ignoreUnknownKeys = true }
-
-        var instance: CompassionHUDConfig = load()
+        var instance: CompassionHUDConfig = CompassionHUDConfig()
             private set
 
-        fun load(): CompassionHUDConfig {
-            return if (file.exists())
-                runCatching { json.decodeFromString<CompassionHUDConfig>(file.readText()) }
-                    .onFailure { println("[Compassion HUD]: Failed to load config: ${it.message}") }
-                    .getOrDefault(CompassionHUDConfig())
-            else CompassionHUDConfig()
+        fun load() {
+            try {
+                if (configFile.exists()) {
+                    instance = json.decodeFromString<CompassionHUDConfig>(configFile.readText())
+                    println("[Compassion HUD]: Config loaded from ${configFile.absolutePath}")
+                } else {
+                    instance = CompassionHUDConfig()
+                    println("[Compassion HUD]: No config file found, using defaults")
+                }
+            } catch (e: Exception) {
+                println("[Compassion HUD]: Failed to load config: ${e.message}")
+                e.printStackTrace()
+                instance = CompassionHUDConfig()
+            }
         }
 
         fun save(config: CompassionHUDConfig) {
-            runCatching {
+            try {
                 instance = config
-                file.writeText(json.encodeToString(serializer(), config))
-            } .onFailure {
-                println("[Compassion HUD]: Failed to save config: ${it.message}")
+                configFile.parentFile?.mkdirs()
+                configFile.writeText(json.encodeToString(config))
+                println("[Compassion HUD]: Config saved to ${configFile.absolutePath}")
+            } catch (e: Exception) {
+                println("[Compassion HUD]: Failed to save config: ${e.message}")
+                e.printStackTrace()
             }
         }
     }

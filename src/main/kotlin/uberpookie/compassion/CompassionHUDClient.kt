@@ -5,6 +5,7 @@ import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry
 import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
 import net.minecraft.resources.Identifier
 import com.terraformersmc.modmenu.api.*
 
@@ -17,6 +18,11 @@ object CompassionHUDClient : ClientModInitializer, ModMenuApi {
             Identifier.fromNamespaceAndPath("compassion", "compass_hud"),
             CompassHUDElement::render
         )
+
+        // Save config when server stops
+        ServerLifecycleEvents.SERVER_STOPPING.register { _ ->
+            CompassionHUDConfig.save(CompassionHUDConfig.instance)
+        }
     }
 
     override fun getModConfigScreenFactory(): ConfigScreenFactory<*> {

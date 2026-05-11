@@ -2,7 +2,6 @@ package uberpookie.compassion
 
 import dev.isxander.yacl3.api.*
 import dev.isxander.yacl3.api.controller.*
-import dev.isxander.yacl3.dsl.binding
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.network.chat.Component
 import java.awt.Color
@@ -54,8 +53,8 @@ object CompassionHUDConfigScreen {
                     .name(Component.translatable("compassion-hud.config.tick_step"))
                     .description(OptionDescription.of(Component.translatable("compassion-hud.config.tick_step.desc")))
                     .binding(
-                        tickStepPresets.indexOf(defaults.tickStep).toFloat(),               // ← index e.g. 2
-                        { tickStepPresets.indexOf(pending.tickStep).toFloat().coerceAtLeast(0f) }, // ← index e.g. 2
+                        tickStepPresets.indexOf(defaults.tickStep).toFloat(),
+                        { tickStepPresets.indexOf(pending.tickStep).toFloat().coerceAtLeast(0f) },
                         { newValue ->
                             val index = newValue.toInt().coerceIn(0, tickStepPresets.size - 1)
                             pending = pending.copy(tickStep = tickStepPresets[index])
@@ -98,7 +97,7 @@ object CompassionHUDConfigScreen {
 
                 .build()
             )
-            .save { CompassionHUDConfig.save(pending) }  // called when user clicks Done
+            .save { CompassionHUDConfig.save(pending) }
             .build()
             .generateScreen(parent)
     }
