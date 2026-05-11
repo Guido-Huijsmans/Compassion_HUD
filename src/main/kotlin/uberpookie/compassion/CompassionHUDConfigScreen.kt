@@ -72,6 +72,22 @@ object CompassionHUDConfigScreen {
                     .build()
                 )
 
+                .option(Option.createBuilder<CoordinatePosition>()
+                    .name(Component.translatable("compassion.config.coordinate_position"))
+                    .description(OptionDescription.of(Component.translatable("compassion.config.coordinate_position.desc")))
+                    .binding(
+                        defaults.coordinatePosition,
+                        { pending.coordinatePosition },
+                        { pending = pending.copy(coordinatePosition = it) }
+                    )
+                    .controller { opt ->
+                        EnumControllerBuilder.create(opt)
+                            .enumClass(CoordinatePosition::class.java)
+                            .formatValue { Component.translatable(it.translationKey) }
+                    }
+                    .build()
+                )
+
                 .option(Option.createBuilder<Boolean>()
                     .name(Component.translatable("compassion-hud.config.hide_on_debug"))
                     .description(OptionDescription.of(Component.translatable("compassion-hud.config.hide_on_debug.desc")))

@@ -66,5 +66,19 @@ object CompassHUDElement {
             val textWidth = font.width(label)
             graphics.text(font, label, labelX - textWidth / 2, barY + 4, textColor)
         }
+
+        if (config.coordinatePosition != CoordinatePosition.NONE) {
+            val coords = "X: ${player.blockX}, Y: ${player.blockY} Z: ${player.blockZ}"
+            val coordWidth = font.width(coords)
+            val coordX = when (config.coordinatePosition) {
+                CoordinatePosition.CORNER_LEFT -> 10
+                CoordinatePosition.CORNER_RIGHT -> screenWidth - coordWidth - 10
+                CoordinatePosition.COMPASS_LEFT -> (screenWidth / 2) - (barWidth / 2 ) - coordWidth - 32
+                CoordinatePosition.COMPASS_RIGHT -> (screenWidth / 2) + (barWidth / 2 ) + 32
+                CoordinatePosition.NONE -> return
+            }
+            val coordY = barY + (17 - font.lineHeight) / 2
+            graphics.text(font, coords, coordX, coordY, config.textColor)
+        }
     }
 }

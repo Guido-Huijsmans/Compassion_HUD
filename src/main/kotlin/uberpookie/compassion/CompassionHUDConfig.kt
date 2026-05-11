@@ -12,6 +12,7 @@ data class CompassionHUDConfig (
     val degreesShown: Float = 90f,
     val hideOnDebug: Boolean = true,
     val tickStep: Float = 11.25f,
+    val coordinatePosition: CoordinatePosition = CoordinatePosition.COMPASS_RIGHT,
 ) {
     companion object {
         private val file get() =
@@ -25,13 +26,18 @@ data class CompassionHUDConfig (
         fun load(): CompassionHUDConfig {
             return if (file.exists())
                 runCatching { json.decodeFromString<CompassionHUDConfig>(file.readText()) }
+                    .onFailure { println("[Compassion HUD]: Failed to load config: ${it.message}") }
                     .getOrDefault(CompassionHUDConfig())
             else CompassionHUDConfig()
         }
 
         fun save(config: CompassionHUDConfig) {
-            instance = config
-            file.writeText(json.encodeToString(serializer(), config))
+            runCatching {
+                instance = config
+                file.writeText(json.encodeToString(serializer(), config))
+            } .onFailure {
+                println("[Compassion HUD]: Failed to save config: ${it.message}")
+            }
         }
     }
 }
