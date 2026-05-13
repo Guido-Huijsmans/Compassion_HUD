@@ -17,5 +17,7 @@
   "compassion-hud.config.tick_step": "Line Step",
   "compassion-hud.config.tick_step.desc": "Changes the angle between the vertical lines.\nDegrees\nDefault is 11.25°",
   "compassion-hud.config.hide_on_debug": "Hide on debug (F3)",
-  "compassion-hud.config.hide_on_debug.desc": "Toggles whether the compass is visible while in the debug (F3) mode.\nDefault is True"
+  "compassion-hud.config.hide_on_debug.desc": "Toggles whether the compass is visible while in the debug (F3) mode.\nDefault is True",
+  "compassion-hud.config.coordinate_position": "Coordinate Position",
+  "compassion-hud.config.coordinate_position": "Changes the position of the coordinate readout.\nDefault is CORNER_LEFT"
 }
