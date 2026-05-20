@@ -2,20 +2,18 @@ package uberpookie.compassion
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.decodeFromString
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File
 
 @Serializable
 data class CompassionHUDConfig(
-    val barWidth: Int = 200,
-    val textColor: Int = 0xFFFFFFFF.toInt(),
-    val degreesShown: Float = 90f,
-    val hideOnDebug: Boolean = true,
-    val tickStep: Float = 11.25f,
-    val coordinatePosition: CoordinatePosition = CoordinatePosition.COMPASS_RIGHT,
-) {
+    val barWidth:       Int = 200,
+    val textColor:      Int = 0xFFFFFFFF.toInt(),
+    val degreesShown:   Float = 90f,
+    val hideOnDebug:    Boolean = true,
+    val tickStep:       Float = 11.25f,
+    val coordsPosition: CoordinatePosition = CoordinatePosition.CORNER_LEFT) {
+
     companion object {
         private val json = Json { 
             prettyPrint = true
@@ -37,6 +35,7 @@ data class CompassionHUDConfig(
                     instance = CompassionHUDConfig()
                     println("[Compassion HUD]: No config file found, using defaults")
                 }
+
             } catch (e: Exception) {
                 println("[Compassion HUD]: Failed to load config: ${e.message}")
                 e.printStackTrace()

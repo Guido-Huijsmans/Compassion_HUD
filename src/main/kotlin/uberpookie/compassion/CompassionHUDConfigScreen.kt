@@ -72,12 +72,12 @@ object CompassionHUDConfigScreen {
                 )
 
                 .option(Option.createBuilder<CoordinatePosition>()
-                    .name(Component.translatable("compassion.config.coordinate_position"))
-                    .description(OptionDescription.of(Component.translatable("compassion.config.coordinate_position.desc")))
+                    .name(Component.translatable("compassion-hud.config.coordinate_position"))
+                    .description(OptionDescription.of(Component.translatable("compassion-hud.config.coordinate_position.desc")))
                     .binding(
-                        defaults.coordinatePosition,
-                        { pending.coordinatePosition },
-                        { pending = pending.copy(coordinatePosition = it) }
+                        defaults.coordsPosition,
+                        { pending.coordsPosition },
+                        { pending = pending.copy(coordsPosition = it) }
                     )
                     .controller { opt ->
                         EnumControllerBuilder.create(opt)
